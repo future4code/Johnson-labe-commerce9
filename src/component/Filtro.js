@@ -1,15 +1,34 @@
 import React from 'react';
-
 function ValorMin () {
-    return <h3> ValorMin </h3>
+    return <div>
+        <h3> ValorMin </h3>
+             <input
+                type="number"
+                value={""}
+                onChange={""}
+              />
+              </div> 
 }
 function ValorMax (){
-    return <h2>ValorMax</h2>
+    return <div>
+    <h3> ValorMax </h3>
+         <input
+            type="number"
+            value={""}
+            onChange={""}
+          />
+          </div> 
 }
 function NomeProduto (){
-    return <h2>nomeDoProduto</h2>
+    return <div>
+    <h3> NomeProduto </h3>
+         <input
+            type="number"
+            value={""}
+            onChange={""}
+          />
+          </div> 
 }
-
 function TituloF () {
     return <h1>Filtro</h1>
 }
