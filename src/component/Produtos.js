@@ -19,14 +19,39 @@ const CardIndividual = styled.div `
 `
 
 class CardProduto extends React.Component {
+  state = { 
+    valorOrdem: ""
+  
+  }
+
+  onChangeOrdem = (event) => {
+    this.setState({valorOrdem: event.target.value})
+  }
+
+  listaFiltrada = () => {
+    return this.props.produto.sort((a,b) => this.state.valorOrdem === "crescente" ? a.value - b.value : b.value - a.value)
+  }
+
 
   
   render(){
     console.log(this.props.produto)
+    console.log(this.state.valorOrdem)
+    const listaDeProdutos = this.listaFiltrada()
     
   return (
+    <div>
+        <div>
+          <h4>Ordenação: </h4>
+          <select value={this.state.valorOrdem} onChange={this.onChangeOrdem}>
+            <option value=""></option>
+            <option value="decrescente">Decrescente</option>
+            <option value="crescente">Crescente</option>
+          </select>
+          </div>
     <Produtos>
-      {this.props.produto.map((prod) =>{
+      
+      {listaDeProdutos.map((prod) =>{
       return (
 
         <CardIndividual>
@@ -39,6 +64,7 @@ class CardProduto extends React.Component {
       )
     })}
     </Produtos>
+    </div>
   );
 };
 };
