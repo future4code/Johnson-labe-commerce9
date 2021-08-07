@@ -7,23 +7,27 @@
 }
 
 
-
-
 .Mainbox {
   background-color: red;
   border: 1px solid black;
 }
 
 .Carrinho {
-  background-color: red;
   display: grid;
-  border: 1px solid black;
+  background-color: red;
+  /* border: 1px solid black; Poderiamos tirar */
+  padding: 10px;
+  box-shadow: 2px 2px 2px 2px grey;
  
 }
 
 .Filtro {
+  display:flexbox ;
+  align-items: flex-start;
   background-color: red;
-  border: 1px solid black;
+  /* border: 1px solid black; Poderiamos tirar */
+  padding: 10px;
+  box-shadow: 2px 2px 2px 2px grey;
 }
 
 .GridProd {
@@ -32,4 +36,6 @@
   gap: 16px;
   padding: 16px;
   border: 1px solid black;
+  border-radius: 10px;
+
 }

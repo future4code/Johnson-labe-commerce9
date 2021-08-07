@@ -2,19 +2,18 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Produtos = styled.div `
-    display: grid;
+  display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
   padding: 16px;
-  border: 1px solid black;
   
-       
-
-
 `
 
 const CardIndividual = styled.div `
-    border: 1px solid black;
+    border: 0.5px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 2px 2px 2px grey;
 
 `
 
