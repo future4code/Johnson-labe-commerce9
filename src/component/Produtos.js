@@ -49,7 +49,7 @@ const DivOrdenacao = styled.div `
 
 class CardProduto extends React.Component {
   state = {
-    valorOrdem: ""
+    valorOrdem: "",
 
   }
 
@@ -61,11 +61,18 @@ class CardProduto extends React.Component {
     return this.props.produto.sort((a, b) => this.state.valorOrdem === "crescente" ? a.value - b.value : b.value - a.value)
   }
 
+  // onClickAdicionarAoCarrinho = (prod) => {
+  //   console.log("Adicionar ao Carrinho", prod)
 
+  //   const copiaCarrinho = [...this.state.carrinho];
+  //   copiaCarrinho.push(prod);
+  //   this.setState({carrinho: copiaCarrinho})
+  // }
 
   render() {
     console.log(this.props.produto)
     console.log(this.state.valorOrdem)
+    console.log(this.state.carrinho)
     const listaDeProdutos = this.listaFiltrada()
 
     return (
@@ -92,7 +99,7 @@ class CardProduto extends React.Component {
                 <Img src={prod.imageUrl} alt="" />
                 <TituloCamiseta><strong>{prod.name}</strong></TituloCamiseta>
                 <p> Valor: {prod.value},00 </p>
-                <Botao >Adicionar ao carrinho</Botao>
+                <Botao onClick={() => this.props.onClickAdicionarAoCarrinho(prod)} >Adicionar ao carrinho</Botao>
               </CardIndividual>
 
             )
