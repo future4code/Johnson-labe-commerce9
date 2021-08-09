@@ -11,29 +11,38 @@ const Produtos = styled.div`
 
 const CardIndividual = styled.div`
   border: 1px solid black;
-  
+  background-color: #F1F6F9;
 
 `
 
 const Img = styled.img`
   width: 250px;
   height: 300px;
+  padding: 5px;
   
   
 
 `
 const TituloCamiseta = styled.p`
   text-align: center;
-
+  color:#14274E;
 
 `
 
 const Botao = styled.button `
-   
+ background-color: #394867;
    width:100%;
+   color:white;
    &:hover {
     cursor: pointer;
     opacity: 0.8;
+    font-family: gotham-ultra-light;
+    background-color: #283033;
+    margin: 0 5px 0 0;
+    color: white;
+    text-align: center;    
+    bottom: 0;
+    left: 0;
     
   }
 
@@ -44,6 +53,7 @@ const DivOrdenacao = styled.div `
   justify-content: space-between;
   
 `
+
 
 
 
@@ -79,10 +89,11 @@ class CardProduto extends React.Component {
       <div>
         <DivOrdenacao>
           <div>
-          <p><strong>Quantidade de produtos:</strong> {this.props.produto.length}</p>
+          <p ><strong>Quantidade de Produtos:</strong> {this.props.produto.length}</p>
           </div>
           <DivOrdenacao>
-          <h4>Ordenação: </h4>
+          <h4>Ordenação:  </h4>
+         
           <select value={this.state.valorOrdem} onChange={this.onChangeOrdem}>
             <option value=""></option>
             <option value="decrescente">Decrescente</option>
