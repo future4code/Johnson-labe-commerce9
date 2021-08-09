@@ -13,8 +13,13 @@ import produto5 from '../img/produto5.jpg';
 const DivCentral = styled.div `
   display: flex;
   width: 100%;
-
-
+  color:#14274E;
+    margin: 0;
+    font-size: 0.6875rem;
+    font-family: Arboria, sans-serif;
+    font-weight: 300;
+    line-height: 1.43;
+   text-align: center;
 
 `
 

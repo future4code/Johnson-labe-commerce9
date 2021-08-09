@@ -2,14 +2,24 @@ import React from 'react';
 import styled from 'styled-components';
 
 const TituloCarrinho = styled.h1 `
+    display: flex;
     margin-left: 10px;
-    color: red;
-    
-
+    color: #14274E;
+    justify-content: center;
+    align-items: center;
 
 `
+const CardCarrinho =  styled.div `
 
-
+    border: 1px solid black;
+    margin-left: 5px;
+    color: #14274E;    
+    font-size: 0.6875rem;
+    font-family: Arboria, sans-serif;
+    font-weight: 300;
+    line-height: 1.43;    
+    width: 180px;
+`
 
 class Carrinho extends React.Component {
      valorTotal = () => {
@@ -29,7 +39,7 @@ class Carrinho extends React.Component {
        
         
         return (
-            <div>
+            <CardCarrinho>
                 <TituloCarrinho>Carrinho:</TituloCarrinho>
                 {this.props.produtosCarrinho.map((cadaProduto) => {
                     return (
@@ -40,7 +50,7 @@ class Carrinho extends React.Component {
                 })}
 
                 <p>Total:{this.valorTotal()},00 </p>
-            </div>)
+            </CardCarrinho>)
     };
 };
 export default Carrinho;

@@ -2,7 +2,15 @@ import React from 'react';
 import Main from './component/Main';
 import './App.css';
 import Carrinho from './component/Carrinho';
-import Filtro from './component/Filtro';
+import Filters from './component/Filtro';
+import Rodape  from './component/rodape';
+
+
+
+
+
+
+
 
 export default class App extends React.Component{
   // state = {
@@ -16,16 +24,26 @@ export default class App extends React.Component{
 
   //   this.setState({carrinho: copiaCarrinho});
   // }
+  onChangeMinFilter = (event) => {
+    this.setState({minFilter: event.target.value})
+  }
 
+  onChangeMaxFilter = (event) => {
+    this.setState({maxFilter: event.target.value})
+  }
+
+  onChangeNameFilter = (event) => {
+    this.setState({nameFilter: event.target.value})
+  }
   
   render(){
 
     return (
       <div className='central'>
-        <Filtro/>
+        <Filters/>
         <Main />
         {/* <Carrinho /> */}
-
+        <Rodape/>
       </div>
     )
   }
